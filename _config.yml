@@ -1,0 +1,17 @@
+# Site settings
+title: Bautista Anglers
+email: youremail@blank.com
+icon:
+url: yoururl
+description: "This is a jekyll theme utilizing Bootstrap.  It was created with a simple businesses in mind, but could be used for any number of things"
+keywords:
+  - "Simple Business"
+  - "Jekyll"
+  - "Bootstrap"
+  - "Theme"
+
+color:
+  menu-primary: 007f82
+  menu-secondary: 00989b
+  page-primary: turquoise
+  page-secondary:

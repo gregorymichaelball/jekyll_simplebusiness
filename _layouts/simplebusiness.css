@@ -1,0 +1,7 @@
+{% include css/bootstrap.css %}
+{% include css/gmb.css %}
+
+.navbar-brand {
+    font-family: "Lobster Two", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+}
