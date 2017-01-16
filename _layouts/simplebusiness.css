@@ -3,5 +3,65 @@
 
 .navbar-brand {
     font-family: "Lobster Two", Helvetica, Arial, sans-serif;
+}
+
+.navbar{
+    padding: 10px;
+}
+
+div.servicesHeader{
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    height: 50px;
+    border-bottom: white solid;
+}
+
+span.servicesHeaderContent{
+    font-family: "Lobster Two", Helvetica, Arial, sans-serif;
+    position: relative;
     font-size: 2em;
+    color: white;
+    vertical-align: baseline;
+    text-align: center;
+}
+
+button#bookButton {
+    font-family: "Cabin", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    position: relative;
+    vertical-align: middle;
+    color: #2b542c;
+    border: solid #2b542c;
+    margin-right: 10px;
+}
+
+#about p {
+    font-size: 1.2em;
+}
+
+.even {
+    background-color: #{{ site.color.page-primary }};
+    color: white;
+}
+
+.odd {
+    background-color: #{{site.color.page-secondary }};
+}
+
+.serviceContainer {
+    display: block;
+}
+
+.serviceIcon {
+    width: 100px;
+    height: 100px;
+}
+
+.serviceName {
+    text-align: center;
+    font-family: "Lobster Two", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    padding-top: px;
+    margin: 0px
 }

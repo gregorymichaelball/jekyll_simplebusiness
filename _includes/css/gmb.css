@@ -30,23 +30,37 @@ header .carousel-inner > .item > img{
     width: 100%;
     object-fit: cover;
 }
+
+div.animatedHeader {
+    height: 50px;
+    width: 0px;
+    overflow: hidden;
+}
+
+span.animatedHeaderContent {
+    white-space: nowrap;
+    top: 50px;
+}
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="section">*/
 section {
-    padding: 50px 50px;
+    padding: 15px 25px 25px 30px;
 }
 
 section h1{
     font-family: "Cabin", Helvetica, Arial, sans-serif;
     font-variant: small-caps;
 }
+
 /*</editor-fold>*/
 
 /*<editor-fold desc="navbar">*/
 a#navLink {
     font-family: "Cabin", Helvetica, Arial, sans-serif;
     font-size: 1.2em;
+    font-weight: bold;
     color: white;
 }
 
@@ -89,7 +103,7 @@ a:hover#navLink {
     }
 
     .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
+        font-size: 2.5em;
         -webkit-transition: all .3s;
         -moz-transition: all .3s;
         transition: all .3s;
@@ -106,3 +120,19 @@ a:hover#navLink {
 }
 /*</editor-fold>*/
 
+.centeredImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centeredText {
+    display: block;
+    text-align: center;
+}
+
+.shadow {
+    box-shadow: 5px 5px 5px grey;
+    -webkit-box-shadow: 5px 5px 5px grey;
+    -moz-box-shadow: 5px 5px 5px grey;
+}

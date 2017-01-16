@@ -3,15 +3,29 @@ title: Bautista Anglers
 email: youremail@blank.com
 icon:
 url: yoururl
-description: "This is a jekyll theme utilizing Bootstrap.  It was created with a simple businesses in mind, but could be used for any number of things"
+description: This is a jekyll theme utilizing Bootstrap.  It was created with a simple businesses in mind, but could be used for any number of things
 keywords:
-  - "Simple Business"
-  - "Jekyll"
-  - "Bootstrap"
-  - "Theme"
+  - Simple Business
+  - Jekyll
+  - Bootstrap
+  - Theme
+
+collections:
+  images:
 
 color:
   menu-primary: 007f82
   menu-secondary: 00989b
-  page-primary: turquoise
-  page-secondary:
+  page-primary: 26454c
+  page-secondary: white
+
+services:
+  - name: Fishing
+    icon: /img/white-fishing-256.png
+    desc:
+  - name: Whale Watching
+    icon: /img/whale-800.png
+    desc:
+  - name: Burials
+    icon:
+    desc:
