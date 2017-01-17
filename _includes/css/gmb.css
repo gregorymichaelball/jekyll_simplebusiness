@@ -17,6 +17,7 @@ header .image-background{
 }
 
 .fullwidth {
+    display: block;
     width: 100%;
     padding-left: 0px;
     padding-right: 0px;
@@ -47,44 +48,31 @@ span.animatedHeaderContent {
 /*<editor-fold desc="section">*/
 section {
     padding: 15px 25px 25px 30px;
+    font-family: "Cabin", Helvetica, Arial, sans-serif;
 }
 
 section h1{
-    font-family: "Cabin", Helvetica, Arial, sans-serif;
     font-variant: small-caps;
+    padding-bottom: 20px;
 }
 
 /*</editor-fold>*/
 
 /*<editor-fold desc="navbar">*/
-a#navLink {
-    font-family: "Cabin", Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-}
 
-a:hover#navLink {
-    font-size: 1.2em;
-    color: #78a8ae;
-}
-
-#navTitle {
-    color: white;
-}
 
 /*.navbar-header {*/
-    /*color: white;*/
-    /*background-color: #{{ site.color.menu-primary }};*/
+/*color: white;*/
+/*background-color: #{{ site.color.menu-primary }};*/
 /*}*/
 
 /*button.navbar-toggle {*/
-    /*color: white;*/
-    /*background-color: #{{ site.color.menu-secondary }};*/
+/*color: white;*/
+/*background-color: #{{ site.color.menu-secondary }};*/
 /*}*/
 
 /*.navbar-collapse {*/
-    /*background-color: #{{ site.color.menu-secondary }};*/
+/*background-color: #{{ site.color.menu-secondary }};*/
 /*}*/
 
 @media(min-width:768px) {
@@ -113,15 +101,43 @@ a:hover#navLink {
         background-color: #{{ site.color.menu-primary }};
         padding: 10px 0;
     }
+}
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 2em;
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/*@media(max-width: 767px){*/
+    .navbar {
+        background-color: #{{ site.color.menu-primary }};
     }
+/*}*/
+
+a#navLink {
+    font-family: "Cabin", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+a:hover#navLink {
+    font-size: 1.2em;
+    color: #78a8ae;
+}
+
+#navTitle {
+    color: white;
+    font-size: 3.5em;
+}
+
+.navbar-fixed-top.navbar-shrink .navbar-brand {
+    font-size: 2em;
 }
 /*</editor-fold>*/
 
 .centeredImage {
     display: block;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
 }
@@ -135,4 +151,42 @@ a:hover#navLink {
     box-shadow: 5px 5px 5px grey;
     -webkit-box-shadow: 5px 5px 5px grey;
     -moz-box-shadow: 5px 5px 5px grey;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.popover-title {
+    color: black;
+    font-size: 15px;
+}
+.popover-content {
+    color: black;
+    font-size: 10px;
+}
+
+.paper-pattern {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: normal 100%/normal Arial, Helvetica, sans-serif;
+    color: rgb(54, 254, 255);
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), -webkit-linear-gradient(90deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+    background: -moz-linear-gradient(90deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), -moz-linear-gradient(0deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 79px, rgb(171,206,212) 79px, rgb(171,206,212) 81px, rgba(0,0,0,0) 81px), linear-gradient(0deg, rgb(238,238,238) 0.1em, rgba(0,0,0,0) 0.1em), rgb(255, 255, 255);
+    background-position: auto auto;
+    -webkit-background-origin: padding-box;
+    background-origin: padding-box;
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    -webkit-background-size: 100% 1.2em;
+    background-size: 100% 1.2em;
 }

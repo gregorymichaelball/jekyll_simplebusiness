@@ -6,10 +6,14 @@ $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top -  $('nav').height()
+            scrollTop: $($anchor.attr('href')).offset().top -  70
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+});
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();
 });
 
 var animatedNavbar = (function() {
@@ -21,6 +25,12 @@ var animatedNavbar = (function() {
 
     function init() {
         window.addEventListener( 'scroll', function( event ) {
+            if( !didScroll ) {
+                didScroll = true;
+                setTimeout( scrollPage, 250 );
+            }
+        }, false );
+        window.addEventListener( 'load', function( event ) {
             if( !didScroll ) {
                 didScroll = true;
                 setTimeout( scrollPage, 250 );
@@ -46,6 +56,13 @@ var animatedNavbar = (function() {
     init();
 
 })();
+
+$(function(){
+    var navMain = $("#bs-example-navbar-collapse-1");
+    navMain.on("click", "a", null, function () {
+        navMain.collapse('hide');
+    });
+});
 
 $(function() {
     var delay = 1000;

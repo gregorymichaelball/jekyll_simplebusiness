@@ -13,6 +13,13 @@ keywords:
 collections:
   images:
 
+# Footer settings
+footer:
+  copyright: Gregory Ball
+  location: Contact Details
+  social: Around the Web
+  credits: Credits
+
 color:
   menu-primary: 007f82
   menu-secondary: 00989b
@@ -20,12 +27,21 @@ color:
   page-secondary: white
 
 services:
+  - name: SCUBA
+    icon: img/scuba-icon-white.png
+    desc:
   - name: Fishing
-    icon: /img/white-fishing-256.png
+    icon: img/white-fishing-256.png
     desc:
   - name: Whale Watching
-    icon: /img/whale-800.png
+    icon: img/whale-white.png
     desc:
-  - name: Burials
-    icon:
-    desc:
+#  - name: Burials
+#    icon:
+#    desc:
+#  - name: Parties/Fundraisers
+#    icon:
+#    desc:
+#  - name: Special Events
+#    icon:
+#    desc:
