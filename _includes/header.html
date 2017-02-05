@@ -14,7 +14,7 @@
                     <div class="carousel-inner" role="listbox">
                         {% for image in site.images %}
                             <div class="item{% if image == site.images.first %} active{% endif %}">
-                                <img src="{{image.image-path}}" alt="{{image.title}}" longdesc="{{image.description}}">
+                                <img style="background-image: url('{{image.img-path}}');" class="image-background" longdesc="{{image.description}}">
                             </div>
                         {% endfor %}
                     </div>
@@ -26,6 +26,7 @@
                     </a>
                     <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>

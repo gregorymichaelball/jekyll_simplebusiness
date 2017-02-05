@@ -1,0 +1,45 @@
+h1{
+    display: block;
+    font-family: "{{ site.fonts.heading }}", Helvetica, Arial, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+section#desc{
+    margin-top: 10px;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.full-height{
+    height: 100%;
+}
+
+.full-width{
+    width: 100vw;
+    padding-left: 0; !important;
+    padding-right: 0; !important;
+}
+
+#map{
+    width: 100vw;
+    height: 100px;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+section#media{
+    width: 100%;
+}
+
+.top-of-page{
+    margin-top: 30px;
+}
+
+@media(min-width: 768px){
+    .full-page{
+        height: 100vh;
+        width: 100%;
+        border: solid white;
+    }
+}

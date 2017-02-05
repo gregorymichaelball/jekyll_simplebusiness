@@ -8,7 +8,7 @@ header {
 }
 
 /*centered and auto-cropped image header*/
-header .image-background{
+.image-background{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -47,13 +47,14 @@ span.animatedHeaderContent {
 
 /*<editor-fold desc="section">*/
 section {
-    padding: 15px 25px 25px 30px;
+    padding: 60px 20px;
     font-family: "Cabin", Helvetica, Arial, sans-serif;
 }
 
 section h1{
     font-variant: small-caps;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    margin: 0;
 }
 
 /*</editor-fold>*/
@@ -125,9 +126,20 @@ a:hover#navLink {
     color: #78a8ae;
 }
 
+a img:hover {
+    opacity: .5;
+}
+
 #navTitle {
     color: white;
     font-size: 3.5em;
+}
+
+@media(max-width: 520px){
+    #navTitle {
+        color: white;
+        font-size: 1.6em;
+    }
 }
 
 .navbar-fixed-top.navbar-shrink .navbar-brand {

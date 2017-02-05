@@ -1,0 +1,54 @@
+<section id="map" class="dark-background">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <!--<div id="map"></div>-->
+                <script>
+                    function Location(name, description, price, lat, lng){
+                        this.name = name;
+                        this.description = description;
+                        this.price = price;
+                        this.lat = lat;
+                        this.lng = lng;
+                    }
+                    function initMap() {
+                        var anacappa = new Location("Anacappa", "", 1200, 34.014956, -119.395854);
+                        var santaCruz = new Location("Santa Cruz", "", 1200, 34.043253, -119.648883);
+                        var santaRosaNear = new Location("Santa Rosa East", "", 1200, 34.002282, -119.977100);
+                        var santaRosaFar = new Location("Santa Rosa West", "", 1500, 34.039279, -120.238025);
+                        var sanMiguel = new Location("San Miguel", "", 1500, 34.089487, -120.359904);
+                        var sanNic = new Location("San Nicholas", "", 2000, 33.291942, -119.491984);
+
+                        var locations = [anacappa, santaCruz, santaRosaNear, santaRosaFar, sanMiguel, sanNic];
+                        var markers = [];
+
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 8,
+                            center: anacappa
+                        });
+
+                        for(i = 0; i < locations.size; i++){
+                            var loc = locations[i];
+                            markers[i] = new google.maps.Marker({
+                                position: new google.maps.LatLng(loc.lat, loc.lng),
+                                map: map,
+                                animation: google.maps.Animation.DROP,
+                                title: loc.title
+                            });
+                        }
+                    }
+                    function toggleBounce() {
+                        if (marker.getAnimation() !== null) {
+                            marker.setAnimation(null);
+                        } else {
+                            marker.setAnimation(google.maps.Animation.BOUNCE);
+                        }
+                    }
+                </script>
+                <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIB_VtfJfP7F9NEIeg9G0GaR2e_2WZg8s&callback=initMap">
+                </script>
+            </div>
+        </div>
+    </div>
+</section>

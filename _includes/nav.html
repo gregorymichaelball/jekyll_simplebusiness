@@ -18,21 +18,26 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li class="page-scroll">
-                        <a id="navLink" href="#about">{{ page.about-title }}</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="navLink" href="#services">{{ page.services-title }}</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="navLink" href="#picture-content">{{ page.picture-content-title }}</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="navLink" href="#blog">{{ page.blog-title }}</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a id="navLink" href="#contact">{{ page.contact-title }}</a>
-                    </li>
+                    {% for link in page.links %}
+                        <li class="page-scroll">
+                            <a id="navLink" href="{% if link.href contains '.' %}{% else %}#{%endif%}{{ link.href }}">{{ link.title }}</a>
+                        </li>
+                    {% endfor %}
+                    <!--<li class="page-scroll">-->
+                        <!--<a id="navLink" href="#about">{{ page.about-title }}</a>-->
+                    <!--</li>-->
+                    <!--<li class="page-scroll">-->
+                        <!--<a id="navLink" href="#services">{{ page.services-title }}</a>-->
+                    <!--</li>-->
+                    <!--<li class="page-scroll">-->
+                        <!--<a id="navLink" href="#picture-content">{{ page.picture-content-title }}</a>-->
+                    <!--</li>-->
+                    <!--<li class="page-scroll">-->
+                        <!--<a id="navLink" href="#blog">{{ page.blog-title }}</a>-->
+                    <!--</li>-->
+                    <!--<li class="page-scroll">-->
+                        <!--<a id="navLink" href="#contact">{{ page.contact-title }}</a>-->
+                    <!--</li>-->
                     <li>
                         <button type="button" onclick="location.href='booking.html'" id="bookButton" class="btn btn-success btn-lg">Book Now</button>
                     </li>

@@ -18,6 +18,14 @@
                 <b>Email:</b><span> myemail@email.com</span>
                 <br>
                 <b>Phone:</b><span> (555) 555-5555</span>
+                <br>
+                <ul class="list-inline">
+                    {% for network in site.social %}
+                    <li>
+                        <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+                    </li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
