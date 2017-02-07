@@ -12,36 +12,65 @@
                         this.lng = lng;
                     }
                     function initMap() {
-                        var anacappa = new Location("Anacappa", "", 1200, 34.014956, -119.395854);
+                        var anacappa = new Location("Anacappa", "Our closest destination provides great fishing at a great cost.", 1200, 34.014956, -119.395854);
                         var santaCruz = new Location("Santa Cruz", "", 1200, 34.043253, -119.648883);
                         var santaRosaNear = new Location("Santa Rosa East", "", 1200, 34.002282, -119.977100);
                         var santaRosaFar = new Location("Santa Rosa West", "", 1500, 34.039279, -120.238025);
                         var sanMiguel = new Location("San Miguel", "", 1500, 34.089487, -120.359904);
                         var sanNic = new Location("San Nicholas", "", 2000, 33.291942, -119.491984);
+                        var coast = new Location("Coast", "If your interested in a simple coastal tour, we can bring you out on our smaller boat.  Half day tours for 4 people for a great price", "600-1000", 34.199602, -119.264488);
 
-                        var locations = [anacappa, santaCruz, santaRosaNear, santaRosaFar, sanMiguel, sanNic];
+                        var locations = [coast, anacappa, santaCruz, santaRosaNear, santaRosaFar, sanMiguel, sanNic];
                         var markers = [];
+                        var content = [];
+                        var infoWindows = [];
 
-                        var map = new google.maps.Map(document.getElementById('map'), {
+                        map = new google.maps.Map(document.getElementById('map'), {
                             zoom: 8,
-                            center: anacappa
+                            center: anacappa,
+                            scrollwheel: false
                         });
 
-                        for(i = 0; i < locations.size; i++){
-                            var loc = locations[i];
+                        var loc;
+
+                        for (i = 0; i < locations.length; i++) {
+                            loc = locations[i];
+
                             markers[i] = new google.maps.Marker({
                                 position: new google.maps.LatLng(loc.lat, loc.lng),
                                 map: map,
                                 animation: google.maps.Animation.DROP,
                                 title: loc.title
                             });
+
+                            markers[i].index = i;
+
+                            content[i] = "<div class='map-popup'><span class='map-popup-title'>"
+                                + loc.name + "</span><br><p style='margin-top: 3px;'>"
+                                + loc.description + "</p><b>Cost:</b><span> $"
+                                + loc.price + "</span><br>" +
+                                "</div>"
+
+                            infoWindows[i] = new google.maps.InfoWindow({
+                                content: content[i],
+                                maxWidth: 300
+                            });
+
+                            google.maps.event.addListener(markers[i], 'click', function () {
+                                for(j = 0; j < infoWindows.length; j++){
+                                    infoWindows[j].close();
+                                }
+                                infoWindows[this.index].open(map, markers[this.index]);
+                                map.panTo(markers[this.index].getPosition());
+                            });
                         }
-                    }
-                    function toggleBounce() {
-                        if (marker.getAnimation() !== null) {
-                            marker.setAnimation(null);
-                        } else {
-                            marker.setAnimation(google.maps.Animation.BOUNCE);
+
+                        function toggleBounce() {
+                            if (marker.getAnimation() !== null) {
+                                marker.setAnimation(null);
+                            } else {
+                                marker.setAnimation(google.maps.Animation.BOUNCE);
+                            }
                         }
                     }
                 </script>

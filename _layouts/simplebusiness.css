@@ -8,12 +8,30 @@
     margin: 0px;
 }
 
+.map-popup {
+    color: black;
+}
+
+.map-popup-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: "{{ site.fonts.heading }}", Helvetica, Arial, sans-serif;
+}
+
 .navbar-brand {
     font-family: "Lobster Two", Helvetica, Arial, sans-serif;
 }
 
 .navbar{
     padding: 10px;
+}
+
+section#about {
+    padding: 60px 20px 20px;
+}
+
+section#services{
+    padding: 0px 20px 60px;
 }
 
 div.servicesHeader{

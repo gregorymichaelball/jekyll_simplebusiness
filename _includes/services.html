@@ -4,13 +4,16 @@
             {% for service in site.services %}
             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="serviceContainer">
-                    <a href="{{ service.url }}"><img class="serviceIcon centeredImage" src="{{ service.icon }}"></a>
+                    <a href="#" onclick="return false" data-toggle="popover" title="{{service.title}}" data-content="{{service.desc}}" data-placement="auto"><img class="serviceIcon centeredImage" src="{{ service.icon }}"></a>
                     <br>
                     <!--<a class="serviceName" data-toggle="popover" title="{{ service.name }} details" data-content="{{ service.desc }}">{{ service.name }}</a>-->
                     <span class="serviceName">{{ service.title }}</span>
                 </div>
             </div>
             {% endfor %}
+        </div>
+        <div class="row">
+            <sub style="margin-top:15px;" class="centeredText page-scroll">For information regarding our other services, please <a href="#contact">contact us</a></sub>
         </div>
     </div>
 </section>

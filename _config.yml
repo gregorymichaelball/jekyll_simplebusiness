@@ -18,13 +18,11 @@ fonts:
 collections:
   images:
   services:
-    output: true
+    output: false
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: instagram
-    url:
-  - title: linkedin
     url:
   - title: facebook
     url:
@@ -38,6 +36,6 @@ footer:
 
 color:
   menu-primary: 007f82
-  menu-secondary: 00989b
+  menu-secondary: 00797C
   page-primary: 26454c
   page-secondary: white
