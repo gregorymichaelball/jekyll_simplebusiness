@@ -23,7 +23,7 @@ collections:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: instagram
-    url:
+    url: https://www.instagram.com/bautistaanglers/
   - title: facebook
     url:
 
@@ -35,7 +35,7 @@ footer:
   credits: Credits
 
 color:
-  menu-primary: 007f82
+  menu-primary: 305F67
   menu-secondary: 00797C
   page-primary: 26454c
   page-secondary: white

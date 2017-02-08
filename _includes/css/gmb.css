@@ -7,6 +7,26 @@ header {
     height: 100vh;
 }
 
+.side-panel {
+    background: black;
+    position: fixed;
+    height: 100vh;
+    width: 30vw;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.side-panel-contents {
+    position: relative;
+}
+
+@media(max-width: 768px) {
+    .side-panel {
+        width: 100vw;
+    }
+}
+
 /*centered and auto-cropped image header*/
 .image-background{
     -webkit-background-size: cover;
@@ -109,9 +129,9 @@ section h1{
 }
 
 /*@media(max-width: 767px){*/
-    .navbar {
-        background-color: #{{ site.color.menu-primary }};
-    }
+    /*.navbar {*/
+        /*background-color: #{{ site.color.menu-primary }};*/
+    /*}*/
 /*}*/
 
 a#navLink {
@@ -126,8 +146,25 @@ a:hover#navLink {
     color: #78a8ae;
 }
 
+a img {
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
 a img:hover {
-    opacity: .5;
+    -webkit-transform: rotateX(-30deg);
+    -moz-transform: rotateX(-30deg);
+    -ms-transform: rotateX(-30deg);
+    -o-transform: rotateX(-30deg);
+    transform: rotateX(-30deg);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
 }
 
 #navTitle {
