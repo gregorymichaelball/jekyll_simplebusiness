@@ -71,7 +71,7 @@ span.servicesHeaderContent{
     transition: all .3s ease-in-out;
 }
 
-button#bookButton {
+button.book-button {
     font-family: "Cabin", Helvetica, Arial, sans-serif;
     font-weight: bold;
     position: relative;
@@ -81,7 +81,7 @@ button#bookButton {
     margin-right: 10px;
 }
 
-#bookButton.navbar-toggle {
+.book-button.navbar-toggle {
     color: white;
 }
 

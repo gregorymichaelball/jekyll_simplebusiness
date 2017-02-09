@@ -8,24 +8,74 @@ header {
 }
 
 .side-panel {
-    background: black;
+    background: #d9d9d9;
     position: fixed;
     height: 100vh;
     width: 30vw;
     top: 0;
-    right: 0;
+    right: -30vw;
     z-index: 9999;
-}
+    overflow: auto;
 
-.side-panel-contents {
-    position: relative;
+    box-shadow: -5px 0 25px black;
+    -webkit-box-shadow: -5px 0 25px black;
+    -moz-box-shadow: -5px 0 25px black;
 }
 
 @media(max-width: 768px) {
     .side-panel {
         width: 100vw;
+        right: -100vw;
     }
 }
+
+.side-panel-contents {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+}
+
+#side-panel-close {
+    height: 100%;
+    display: table;
+    position: relative;
+    float: left;
+    font-size: 2em;
+
+    background: #636363; /* Old browsers */
+
+
+}
+
+#side-panel-close a {
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#side-panel-close a:hover {
+    display: table-cell;
+    vertical-align: middle;
+    color: #09434d;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+#side-panel-scheduler {
+    float: right;
+    width: 100%;
+}
+
+
 
 /*centered and auto-cropped image header*/
 .image-background{

@@ -12,6 +12,52 @@ $(function() {
     });
 });
 
+$(function() {
+
+    var elem = document.querySelector('#side-panel');
+    var open = false;
+
+    var travelDistance;
+
+    if ($(window).width() <= 768) {
+        travelDistance = '-100vw';
+    }else{
+        travelDistance = '-30vw'
+    }
+
+    $(window).resize(function(){
+        if ($(window).width() <= 768) {
+            travelDistance = '-100vw';
+        }else{
+            travelDistance = '-30vw'
+        }
+    });
+
+
+    function handleSideAction() {
+        if (open) {
+            $('#side-panel')
+                .animate({
+                    right: travelDistance
+                }, 1000, 'easeInOutQuint');
+        } else {
+            $('#side-panel')
+                .animate({
+                    right: '0'
+                }, 1000, 'easeInOutQuint');
+        }
+        open = !open;
+    }
+
+    $('#side-panel-close').bind('click', function(event) {
+        handleSideAction();
+    });
+
+    $('.book-button').bind('click', function(event) {
+       handleSideAction();
+    });
+});
+
 $(document).ready(function() {
     $("#myCarousel").swiperight(function() {
         $("#myCarousel").carousel('prev');
