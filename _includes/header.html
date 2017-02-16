@@ -14,7 +14,7 @@
                     <div class="carousel-inner" role="listbox">
                         {% for image in site.images %}
                             <div class="item{% if image == site.images.first %} active{% endif %}">
-                                <img style="background-image: url('{{image.img-path}}');" class="image-background" longdesc="{{image.description}}">
+                                <img style="background-image: url('{{image.img-path}}');" class="image-background 100vh" longdesc="{{image.description}}">
                             </div>
                         {% endfor %}
                     </div>

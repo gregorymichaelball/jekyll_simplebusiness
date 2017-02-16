@@ -11,9 +11,9 @@ header {
     background: #d9d9d9;
     position: fixed;
     height: 100vh;
-    width: 30vw;
+    width: 500px;
     top: 0;
-    right: -30vw;
+    right: -500px;
     z-index: 9999;
     overflow: auto;
 
@@ -30,22 +30,19 @@ header {
 }
 
 .side-panel-contents {
+    display: flex;
     position: relative;
-    display: inline-flex;
     width: 100%;
     height: 100%;
 }
 
 #side-panel-close {
+    display: inline-table;
     height: 100%;
-    display: table;
     position: relative;
     float: left;
     font-size: 2em;
-
     background: #636363; /* Old browsers */
-
-
 }
 
 #side-panel-close a {
@@ -71,11 +68,11 @@ header {
 }
 
 #side-panel-scheduler {
+    overflow: auto;
+    display: inline;
     float: right;
     width: 100%;
 }
-
-
 
 /*centered and auto-cropped image header*/
 .image-background{
@@ -146,6 +143,28 @@ section h1{
 /*background-color: #{{ site.color.menu-secondary }};*/
 /*}*/
 
+@media(max-width: 767px) {
+    .navbar-fixed-top {
+        background-color: transparent;
+        border: none;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        background-color: #{{ site.color.menu-primary }};
+        padding: 10px 3px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+    }
+}
+
 @media(min-width:768px) {
     .navbar-fixed-top {
         padding: 10px 0;
@@ -170,8 +189,8 @@ section h1{
 
     .navbar-fixed-top.navbar-shrink {
         background-color: #{{ site.color.menu-primary }};
-        padding: 10px 0;
-    }
+    padding: 10px 3px;
+}
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -179,9 +198,9 @@ section h1{
 }
 
 /*@media(max-width: 767px){*/
-    /*.navbar {*/
-        /*background-color: #{{ site.color.menu-primary }};*/
-    /*}*/
+/*.navbar {*/
+/*background-color: #{{ site.color.menu-primary }};*/
+/*}*/
 /*}*/
 
 a#navLink {
@@ -205,11 +224,11 @@ a img {
 }
 
 a img:hover {
-    -webkit-transform: rotateX(-30deg);
-    -moz-transform: rotateX(-30deg);
-    -ms-transform: rotateX(-30deg);
-    -o-transform: rotateX(-30deg);
-    transform: rotateX(-30deg);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    -ms-transform: scale(1.2, 1.2);
+    -o-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -ms-transition: all .3s;

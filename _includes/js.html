@@ -1,11 +1,11 @@
 <script src="{{ "js/jquery-3.1.1.js" }}"></script>
 <script src="{{ "js/jquery.easing.min.js" }}"></script>
+<script src="{{ "js/jquery.mobile.custom.min.js" }}"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ "js/bootstrap.js" }}"></script>
 
 <script src="{{ "js/classie.js" }}"></script>
-<script src="{{ "js/jquery.mobile.custom.min.js" }}"></script>
 <!-- Custom Theme JavaScript -->
 <script src="{{ "js/gmb.js" }}"></script>
 
@@ -29,5 +29,10 @@ This is the base buggyfill.
     // provide hacks plugin to make the contentHack property work correctly.
     hacks: window.viewportUnitsBuggyfillHacks
 
-});</script>
+});
+
+if (document.getElementById('patched-viewport')) {
+    window.addEventListener('resize', viewportUnitsBuggyfill.refresh, true);
+}
+</script>
 

@@ -4,6 +4,7 @@
 #map{
     width: 100%;
     height: 60vh;
+    content: 'viewport-units-buggyfill; height: 60vh;';
     padding: 20px 0px;
     margin: 0px;
 }
@@ -100,6 +101,7 @@ button.book-button {
 
 .serviceContainer {
     display: block;
+    margin: 10px;
 }
 
 .serviceIcon {
@@ -121,6 +123,16 @@ button.book-button {
 
 .serviceName:hover {
     color: white;
+}
+
+.service-popover {
+    position:relative;
+    display:inline-block;
+}
+
+popover {
+    position:relative;
+    display:inline-block;
 }
 
 .allContentHeader {
@@ -158,7 +170,7 @@ button.book-button {
 .postContent {
     margin-left: 15px;
     font-size: 1.1em;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Gochi Hand', cursive;
 }
 
 .posts-container{
