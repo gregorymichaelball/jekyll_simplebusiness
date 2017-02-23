@@ -5,21 +5,17 @@
                 <h1>{{ page.picture-content-title }}</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 col-xs-12">
-                <img src="img/catillac.jpg" class="img-responsive centeredImage shadow">
+        {% for item in site.boats %}
+            <div class="row picture-content-item">
+                <div class="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-5 col-sm-offset-1 col-sm-10 col-xs-12">
+                    <img src="{{ item.img }}" class="picture-content-img img-responsive centeredImage shadow">
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-offset-1 col-sm-10 col-xs-12">
+                    <h2 class="allContentHeader">{{ item.name }}</h2>
+                    <p class="statContent">{{ item.desc }}</p>
+                    {{ item.content }}
+                </div>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-offset-1 col-sm-10 col-xs-12">
-                <h2 class="allContentHeader">Catillac</h2>
-                <p class="statContent">The Catillac is a catamaran with twin 225 Honda engines.  This means it gets to
-                its destination 3 times faster than many conventional boats.  Fish more, ride less.</p>
-                <h3 class="statHeading">Size</h3>
-                <p class="statContent">Carries 6 plus gear and the Captain</p>
-                <h3 class="statHeading">Features</h3>
-                <ul class="statContent">
-                    <li>Catamaran</li>
-                </ul>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </section>

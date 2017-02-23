@@ -14,7 +14,7 @@
                     <div class="carousel-inner" role="listbox">
                         {% for image in site.images %}
                             <div class="item{% if image == site.images.first %} active{% endif %}">
-                                <img style="background-image: url('{{image.img-path}}');" class="image-background 100vh" longdesc="{{image.description}}">
+                                <img style="background-image: url('{{image.src}}');" class="image-background 100vh" longdesc="{{image.description}}">
                             </div>
                         {% endfor %}
                     </div>
@@ -29,15 +29,16 @@
                         <span class="sr-only">Next</span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div>
+                </div><span>
                 <div href="#services" class="animatedHeader servicesHeader">
                     <span class="animatedHeaderContent servicesHeaderContent">
-                        {% for service in site.services %}
-                            {{ service.name }}
-                            {% if service != site.services.last %}
+                        {% for service in site.banner-services %}
+                            {{ service }}
+                            {% if service != site.banner-services.last %}
                                 ,
                             {% endif %}
-                        {% endfor %}</span>
+                        {% endfor %}
+                    </span>
                 </div>
             </div>
         </div>

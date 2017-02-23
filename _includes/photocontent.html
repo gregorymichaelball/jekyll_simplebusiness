@@ -1,0 +1,13 @@
+<section class="photocontent">
+    {% for section in site.photosections %}
+        <div class="row">
+
+            <div class="photocontent-photo col-lg-3">
+                <img src="{{ section.image-src }}">
+            </div>
+            <div class="photocontent-content col-lg-9">
+                {{ section.content }}
+            </div>
+        </div>
+    {% endfor %}
+</section>

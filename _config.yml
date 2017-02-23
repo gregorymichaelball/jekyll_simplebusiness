@@ -1,25 +1,71 @@
 # Site settings
 title: Bautista Anglers
-email: youremail@blank.com
+email: bautistaanglers@gmail.com
 icon:
-url: yoururl
-description: This is a jekyll theme utilizing Bootstrap.  It was created with a simple businesses in mind, but could be used for any number of things
+url: bautistaanglers.com
+description: Bautista Anglers is a family-owned charter business out of Channel Islands Harbor in Oxnard, California.  We provide many services to several locations at a very good price.
+about: Bautista Anglers is a family-owned business that wants to make the joy of fishing, available to all.  We have been fishing and navigating these waters for over 30 years, and want the opportunity to share our experience with you.
+                           Whether you are looking to fish, go on a private whale watching tour, or simply check out the islands;
+                           We are here to help.
+address: Channel Islands Harbor<br>Oxnard, CA 93035
+phone: (805)382-6951
 keywords:
-  - Simple Business
-  - Jekyll
-  - Bootstrap
-  - Theme
+  - Fishing
+  - Bautista
+  - Harbor
+  - Anglers
+  - Channel Islands
+  - Oxnard
+  - Whale Watching
+  - Ventura County
+  - Camarillo
+  - Ventura
+  - Kayak
+  - Channel Islands
+  - Anacappa
+  - Santa Rosa
+  - San Miguel
+  - San Nicolaus
+  - Santa Cruz
+  - Islands
+  - Family
+  - Cheap
+  - Inexpensive
+  - Charters
+
+banner-services:
+  - Fishing Charters
+  - Whale Watching
+  - Coastal Tours
+  - Kayak Fishing
 
 fonts:
   special: Lobster Two
   heading: Cabin
   content:
 
+images:
+  - title: Dolphin
+    src: img/header/dolphin.jpg
+  - title: Island 1
+    src: img/header/island_1.jpg
+  - title: Island 2
+    src: img/header/island_2.jpg
+  - title: Island 3
+    src: img/header/island_3.jpg
+  - title: The boat at sunset
+    src: img/header/the_boat_at_sunset.jpg
+  - title: The Fish
+    src: img/header/the_fish.jpg
+  - title: Channel Islands Harbor
+    src: img/header/the_harbor.jpg
+
 collections:
-  images:
   services:
     output: false
   locations:
+  photosections:
+  boats:
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:

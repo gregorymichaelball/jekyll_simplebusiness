@@ -3,9 +3,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 text-center">
                 <h1>Address</h1>
-                <span>Channel Islands Harbor</span>
-                <br>
-                <span>Oxnard, CA 93035</span>
+                <span>{{ site.address }}</span>
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="map-container">
@@ -15,9 +13,9 @@
             </div>
             <div class="col-lg-4 col-md-4 text-center">
                 <h1>Contact Details</h1>
-                <b>Email:</b><span> bautistaanglers@gmail.com</span>
+                <b>Email:</b><a class="mail" href="mailto:{{ site.email }}"> {{ site.email }}</a>
                 <br>
-                <b>Phone:</b><span> (805)382-6951</span>
+                <b>Phone:</b><span> {{ site.phone }}</span>
                 <br>
                 <ul class="list-inline">
                     {% for network in site.social %}
