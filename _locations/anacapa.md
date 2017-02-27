@@ -1,5 +1,5 @@
 ---
-title: Anacappa
+title: Anacapa
 lat: 34.014956
 lon: -119.395854
 price: 1200

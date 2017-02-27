@@ -1,6 +1,8 @@
 <script src="{{ "js/jquery-3.1.1.js" }}"></script>
 <script src="{{ "js/jquery.easing.min.js" }}"></script>
-<script src="{{ "js/jquery.mobile.custom.min.js" }}"></script>
+<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="{{ "js/bootstrap.js" }}"></script>
@@ -8,31 +10,3 @@
 <script src="{{ "js/classie.js" }}"></script>
 <!-- Custom Theme JavaScript -->
 <script src="{{ "js/gmb.js" }}"></script>
-
-<!--
-This is the base buggyfill.
--->
-<script src="{{ "js/viewport-units-buggyfill.js" }}"></script>
-
-<!--
-      This is the hacks plugin needed for contentHacks to work correctly
-      (see below).
--->
-
-<script src="{{ "js/viewport-units-buggyfill.hacks.js" }}"></script>
-<script>window.viewportUnitsBuggyfill.init({
-
-    // milliseconds to delay between updates of viewport-units
-    // caused by orientationchange, pageshow, resize events
-    refreshDebounceWait: 250,
-
-    // provide hacks plugin to make the contentHack property work correctly.
-    hacks: window.viewportUnitsBuggyfillHacks
-
-});
-
-if (document.getElementById('patched-viewport')) {
-    window.addEventListener('resize', viewportUnitsBuggyfill.refresh, true);
-}
-</script>
-

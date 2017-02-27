@@ -50,11 +50,11 @@ section.photocontent {
 
 .picture-content-item {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .picture-content-img {
-    max-height: 400px;
+    max-height: 600px;
 }
 
 .photocontent-photo{
@@ -187,7 +187,7 @@ button.book-button {
 }
 
 .postContainer {
-    padding-left: 100px;
+    padding-left: 20px;
     padding-right: 20px
 }
 
