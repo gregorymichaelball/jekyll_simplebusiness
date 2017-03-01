@@ -1,0 +1,25 @@
+<section class="dark-background low-padding">
+    <div class="row" >
+        <div class="col-lg-12">
+            <div class="slides">
+                <ul class="pgwSlideshow">
+                    {% for image in site.static_files %}
+                    {% if image.path contains 'img/photo_gallery' %}
+                    <li><img src="{{ site.baseurl }}{{ image.path }}" alt="{{ image.path | remove: "/img/photo_gallery/" | remove: ".jpg" | remove: ".png" }}"></li>
+                    {% endif %}
+                    {% endfor %}
+                    <!--<li>-->
+                    <!--<img src="shanghai.jpg">-->
+                    <!--<span>Shanghai, China</span>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--<a href="http://www.nyc.gov" target="_blank">-->
+                    <!--<img src="new-york.jpg">-->
+                    <!--<span>New York, NY, USA</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

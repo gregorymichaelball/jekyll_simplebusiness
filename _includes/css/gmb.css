@@ -7,6 +7,22 @@ header {
     height: 100vh;
 }
 
+.low-padding {
+    padding: 10px;
+}
+
+.slides {
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+@media(max-width: 768px) {
+    .slides {
+        width: 90%;
+    }
+}
+
 a.mail {
     color: white;
 }

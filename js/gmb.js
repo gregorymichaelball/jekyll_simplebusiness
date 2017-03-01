@@ -92,6 +92,12 @@ $(document).on('pageinit', function(event){
     });
 });
 
+$(document).ready(function() {
+    var options = {};
+    options.maxHeight = 400;
+    $('.pgwSlideshow').pgwSlideshow( options );
+});
+
 $(document).ready(function(){
     $('[data-toggle="popover"]').popover();
 });
